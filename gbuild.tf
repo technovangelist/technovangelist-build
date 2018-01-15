@@ -36,7 +36,8 @@ resource "aws_iam_policy" "codebuild_policy" {
                 "logs:CreateLogGroup", 
                 "logs:CreateLogStream", 
                 "logs:PutLogEvents", 
-                "ecr:GetAuthorizationToken"
+                "ecr:GetAuthorizationToken", 
+                "ecr:InitiateLayerUpload"
             ]
         }
     ]
@@ -76,4 +77,8 @@ resource "aws_codebuild_project" "buildtechnovangelistbuilder" {
         command = "aws codebuild create-webhook --project-name buildtechnovangelistbuilder"
     }
 
+}
+
+resource "aws_ecr_repository" "mattw-technovangelist-builder" {
+  name = "mattw-technovangelist-builder"
 }
