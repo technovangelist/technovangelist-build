@@ -2,7 +2,7 @@ FROM mhart/alpine-node:8
 
 WORKDIR /app
 RUN pwd
-COPY package.json yarn.lock ./
+COPY package.json ./
 RUN npm install --global gatsby-cli
 RUN yarn install --production
 RUN apk -Uuv add python curl && \
