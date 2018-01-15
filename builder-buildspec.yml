@@ -12,9 +12,9 @@ phases:
   build:
     commands: 
       - echo Building the Docker image...
-      - docker build -t mattw-technovangelist-builder:latest .
-      - docker tag mattw-technovangelist-builder:latest 133160321634.dkr.ecr.us-east-1.amazonaws.com/mattw-technovangelist-builder:latest
+      - docker build -t mattw-technovangelist-builder .
+      - docker tag mattw-technovangelist-builder:latest 133160321634.dkr.ecr.us-east-1.amazonaws.com/mattw-technovangelist-builder:latest 
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - docker push 133160321634.dkr.ecr.us-east-1.amazonaws.com/mattw-technovangelist-builder
+      - docker push 133160321634.dkr.ecr.us-east-1.amazonaws.com/mattw-technovangelist-builder:latest
