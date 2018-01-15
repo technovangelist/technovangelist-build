@@ -37,7 +37,9 @@ resource "aws_iam_policy" "codebuild_policy" {
                 "logs:CreateLogStream", 
                 "logs:PutLogEvents", 
                 "ecr:GetAuthorizationToken", 
-                "ecr:InitiateLayerUpload"
+                "ecr:InitiateLayerUpload", 
+                "ecr:UploadLayerPart", 
+                "ecr:CompleteLayerUpload"
             ]
         }
     ]

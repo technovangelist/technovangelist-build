@@ -17,4 +17,4 @@ phases:
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - docker push 133160321634.dkr.ecr.us-east-1.amazonaws.com/mattw-technovangelist-builder:latest
+      - docker push 133160321634.dkr.ecr.us-east-1.amazonaws.com/mattw-technovangelist-builder
