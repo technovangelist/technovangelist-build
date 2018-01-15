@@ -61,13 +61,14 @@ resource "aws_codebuild_project" "buildtechnovangelistbuilder" {
 
     environment {
         compute_type = "BUILD_GENERAL1_SMALL"
-        image = 
+        image = "jch254/dind-terraform-aws"
         type = "LINUX_CONTAINER"
     }
 
     source {
         type = "GITHUB"
-        location = ""
+        location = "https://github.com/technovangelist/technovangelist-build"
+        buildspec = "builder-buildspec.yml"
     }
-    
+
 }
